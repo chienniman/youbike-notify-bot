@@ -19,6 +19,7 @@ cron.schedule(
                 text: "晚上好！排程測試",
             };
             const client = new line.Client(config);
+            <!--    user_id，可以在Basic settings取得自己測試，也可以在request中取得     -->
             client
                 .pushMessage({user-id}, message)
                 .then(() => console.log("Message sent!"))
@@ -33,6 +34,7 @@ cron.schedule(
     }
 );
 ```
+[node-cron](https://www.npmjs.com/package/node-cron)
 ## 開發
 1.clone到本地，npm install<br>
 2.新增.env<br>
