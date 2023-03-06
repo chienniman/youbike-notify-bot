@@ -8,33 +8,15 @@
 
 ## 自動排程(node-cron)
 ![query-youbike-success](https://user-images.githubusercontent.com/97031067/223133913-0824f624-969c-4118-abb6-2869bd5c575b.jpg)
-```
-const cron = require("node-cron");
-cron.schedule(
-    "min hr * * *",
-    () => {
-        try {
-            const message = {
-                type: "text",
-                text: "晚上好！排程測試",
-            };
-            const client = new line.Client(config);
-            <!--    user_id，可以在Basic settings取得自己測試，也可以在request中取得     -->
-            client
-                .pushMessage({user-id}, message)
-                .then(() => console.log("Message sent!"))
-                .catch((err) => console.error(err));
-        } catch (e) {
-            console.error(e);
-        }
-    },
-    {
-        scheduled: true,
-        timezone: "Asia/Taipei",
-    }
-);
-```
+
+![cron](https://user-images.githubusercontent.com/97031067/223153397-a53e02d2-9527-4f6f-9635-21a90334ff9d.jpg)
+
 [node-cron](https://www.npmjs.com/package/node-cron)
+
+## Youbike API處理
+![ubike](https://user-images.githubusercontent.com/97031067/223155913-93ff832c-fc32-45c5-aba6-41674f4485e1.jpg)
+
+
 ## 開發
 1.clone到本地，npm install<br>
 2.新增.env<br>
