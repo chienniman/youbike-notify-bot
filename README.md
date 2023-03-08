@@ -38,6 +38,7 @@
 >Free instance types are not available for Private Services, Background Workers, or Cron Jobs.<br>
 >Web Services on the free instance type are automatically spun down after 15 minutes of inactivity. When a new request for a free service comes in, Render spins it up again so it can process the request.
 This can cause a response delay of up to 30 seconds for the first request that comes in after a period of inactivity.<br>
+
 1.本地伺服器可自動排程，但render雲的免費計畫不支援<br>
 2.超過15分鐘沒有活動，伺服器會自動停止，直到新的請求，因此會造成延遲響應。<br>
 
