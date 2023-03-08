@@ -12,22 +12,20 @@
 ## Youbike API
 ![query-ubike](https://user-images.githubusercontent.com/97031067/223732784-acffb1ac-9fe5-4e51-b68e-dd305360864b.jpg)
 
-## 自動排程(node-cron)
+## Cron
 ![cron](https://user-images.githubusercontent.com/97031067/223153397-a53e02d2-9527-4f6f-9635-21a90334ff9d.jpg)
 [node-cron](https://www.npmjs.com/package/node-cron)
 
 
-## 本地開發
+## 本地
 1.```git clone https://github.com/chienniman/YouBikeNotify-Bot.git```<br>
 2.```npm install```<br>
 3.Adding .env <br>
 4.Configuring Environment (Key) Variables<br>
-```
-Messaging API=>channelAccessToken
-Basic settings=>channelSecret
-Basic settings=>userId
-```
-## Youbike API 可查詢id，index.js內客製化格式 
-startingStationId,targetStationId,secondStationId
-apiTriggerTime:process.env.API_TRIGGER_TIME,
-timezone:process.env.TIMEZONE,
+![config](https://user-images.githubusercontent.com/97031067/223736296-33f7a100-4ae0-499a-a2fb-09be90f18bba.jpg)
+
+## Deployment(render)
+1.先設定yaml
+[render.yaml](https://github.com/chienniman/YouBikeNotify-Bot/blob/main/render.yaml)
+2.新增Web Service
+
