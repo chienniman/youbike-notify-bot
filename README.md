@@ -1,5 +1,5 @@
 # YouBikeNotify-Bot
-為快速查詢youbike，以Node.js+Express.js開發的聊天機器人，邏輯都在[index.js](https://github.com/chienniman/YouBikeNotify-Bot)
+為快速查詢youbike，以Node.js+Express.js開發的聊天機器人，邏輯都在[index.js](https://github.com/chienniman/YouBikeNotify-Bot/blob/main/index.js)
 
 ## 特點
 1.快速查詢youbike特定站點<br>
