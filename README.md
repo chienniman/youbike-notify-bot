@@ -1,13 +1,13 @@
 # YouBikeNotify-Bot
-為快速查詢youbike，以Node.js+Express.js開發的聊天機器人，邏輯都在[index.js](https://github.com/chienniman/YouBikeNotify-Bot/blob/main/index.js)
+![ubike-robot-result](https://github.com/chienniman/YouBikeNotify-Bot/assets/97031067/babeef57-734b-46d1-9ceb-4624aa1c6d32)
+
+為快速查詢youbike，以Node.js開發的聊天機器人，邏輯都在[index.js](https://github.com/chienniman/YouBikeNotify-Bot/blob/main/index.js)
 
 ## 特點
-1.快速查詢youbike特定站點<br>
+1.快速查詢特定站點<br>
 2.格式客製<br>
-3.精簡高效(134行)<br>
-4.部署render雲<br>
-5.支持自動排程<br>
-![ubike-robot-result](https://user-images.githubusercontent.com/97031067/223730201-619a5cc6-0bea-49e2-a96e-9efae2257733.png)
+3.部署render雲<br>
+4.自動排程<br>
 
 ## Youbike API
 ![query-ubike](https://user-images.githubusercontent.com/97031067/223732784-acffb1ac-9fe5-4e51-b68e-dd305360864b.jpg)
@@ -41,8 +41,3 @@ This can cause a response delay of up to 30 seconds for the first request that c
 
 1.本地伺服器可自動排程，但render雲的免費計畫不支援<br>
 2.超過15分鐘沒有活動，伺服器會自動停止，直到新的請求，因此會造成延遲響應。<br>
-3.總結以上2點，部署render版本只能算是半自動，15分鐘前有請求，可觸發排程<br>
-
-## 心得總結
-youbike地圖要逐一輸入搜尋，記錄資訊就相當麻煩，還要考慮過期，總不能一直盯著地圖重整吧，linebot點擊一次幾秒內就能解決(~~不過得先花好幾天研究LINE SDK~~)，朋友試用後的反饋也是相當輕巧方便，得感謝heroku之後還有如此便利、不用綁卡的雲，缺點也是相當明顯，不穩定的響應時間(1秒~6分鐘)，注定讓免費計畫只能作為實驗用途，應該沒有使用者能接受超過5秒的等待，會不會升級成付費版本目前還在觀察中，考量到簡潔好用的整合介面，內建支持Github，可能性應該偏高。
-
