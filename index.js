@@ -14,8 +14,7 @@ const config = {
     secondStationId: process.env.SECOND_STATION_ID,
     apiTriggerTime:process.env.API_TRIGGER_TIME,
     timezone:process.env.TIMEZONE,
-    youbikeApi:
-    "https://datacenter.taichung.gov.tw/swagger/OpenData/9af00e84-473a-4f3d-99be-b875d8e86256",
+    youbikeApi:process.env.YOUBIKEAPI,
     linebotReplyTimeout: 5000,
     requestTimeout:10000
 };
