@@ -1,8 +1,8 @@
 services:
 - type: web
-  name: YouBikeNotify-Bot 
+  name: youbike-notify-bot
   env: node
-  repo: https://github.com/line/line-bot-sdk-nodejs.git
+  repo: https://github.com/chienniman/youbike-notify-bot.git
   buildCommand: npm install
   startCommand: node index.js
   plan: free
