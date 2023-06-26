@@ -12,11 +12,11 @@ const config = {
     startingStationId: process.env.STARTING_STATION_ID,
     targetStationId: process.env.TARGET_STATION_ID,
     secondStationId: process.env.SECOND_STATION_ID,
-    apiTriggerTime:process.env.API_TRIGGER_TIME,
-    timezone:process.env.TIMEZONE,
-    youbikeApi:process.env.YOUBIKEAPI,
+    apiTriggerTime: process.env.API_TRIGGER_TIME,
+    timezone: process.env.TIMEZONE,
+    youbikeApi: process.env.YOUBIKEAPI,
     linebotReplyTimeout: 5000,
-    requestTimeout:10000
+    requestTimeout: 10000,
 };
 const client = new line.Client(config);
 const apiUrl = config.youbikeApi;
@@ -42,7 +42,10 @@ const convertApiObjectToText = (youbike) => {
 const queryYouBikeApi = async () => {
     const request = axios.get(apiUrl, { timeout: config.linebotReplyTimeout });
     const timeout = new Promise((resolve, reject) => {
-        setTimeout(() => reject(new Error("Request timed out")), config.requestTimeout);
+        setTimeout(
+            () => reject(new Error("Request timed out")),
+            config.requestTimeout
+        );
     });
     const response = await Promise.race([request, timeout]);
     const collection = response.data.retVal;
@@ -78,7 +81,6 @@ const handleEvent = async (event) => {
     }
 
     try {
-        console.log('sent');
         const result = await queryYouBikeApi();
         const replyText = convertApiObjectToText(result);
         return client.replyMessage(event.replyToken, {
@@ -87,10 +89,6 @@ const handleEvent = async (event) => {
         });
     } catch (error) {
         console.error(error.message);
-        return client.replyMessage(event.replyToken, {
-            type: "text",
-            text: `${error.message}，請稍後再試`,
-        });
     }
 };
 
@@ -99,33 +97,33 @@ app.post("/webhook", line.middleware(config), (req, res) => {
         .then((result) => res.json(result))
         .catch((err) => {
             console.error(err);
-            res.status(500).end();
+            res.status(err.status || 500).send(err.message)
         });
 });
 
 cron.schedule(
     config.apiTriggerTime,
     async () => {
-      try {
-        const result = await queryYouBikeApi();
-        const replyText = convertApiObjectToText(result);
-        const message = {
-          type: "text",
-          text: replyText,
-        };
-        client
-          .pushMessage(config.userId,message)
-          .then(() => console.log("Message sent!"))
-          .catch((err) => console.error(err));
-      } catch (e) {
-        console.error(e);
-      }
+        try {
+            const result = await queryYouBikeApi();
+            const replyText = convertApiObjectToText(result);
+            const message = {
+                type: "text",
+                text: replyText,
+            };
+            client
+                .pushMessage(config.userId, message)
+                .then(() => console.log("Cron triggered !"))
+                .catch((err) => console.error(err));
+        } catch (e) {
+            console.error(e);
+        }
     },
     {
-      scheduled: true,
-      timezone: config.timezone,
+        scheduled: true,
+        timezone: config.timezone,
     }
-  );
+);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
