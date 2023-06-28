@@ -19,7 +19,7 @@ The Node.js-based LINE bot
 [node-cron](https://www.npmjs.com/package/node-cron)
 
 ## Requirements
-```Node.js 16 or higher```
+```Node.js 14 or higher```
 
 ## Installation
 
