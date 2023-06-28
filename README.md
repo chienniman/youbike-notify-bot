@@ -1,4 +1,4 @@
-# YouBikeNotify-Bot
+# youbike-notify-bot
 ![ubike-robot-result](https://github.com/chienniman/YouBikeNotify-Bot/assets/97031067/babeef57-734b-46d1-9ceb-4624aa1c6d32)
 
 ## Introduction
