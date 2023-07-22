@@ -30,7 +30,7 @@ The Node.js-based LINE bot
 ## Deployment(render)
 >[nodejs-on-rende](https://github.com/haojiwu/line-bot-nodejs-on-render)<br>
 
-1.Configure[render.yaml](https://github.com/chienniman/YouBikeNotify-Bot/blob/main/render.yaml)<br>
+1.Configure [render.yaml](https://github.com/chienniman/YouBikeNotify-Bot/blob/main/render.yaml)<br>
 2.Add a Web service<br>
 3.Create a public Git repository<br>
 4.Set up name, environment, and region<br>
