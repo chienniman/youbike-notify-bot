@@ -39,3 +39,6 @@ The Node.js-based LINE bot
 
 ## Limitations
 * Free instance types are not available for Private Services, Background Workers, or Cron Jobs.
+
+## Ref
+[line-bot-sdk-nodejs](https://github.com/line/line-bot-sdk-nodejs/tree/next)
