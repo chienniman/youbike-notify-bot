@@ -4,17 +4,11 @@
 ## Introduction
 The Node.js-based LINE bot
 
-* Quick station-specific queries
-* Customizable formatting
-* Cloud deployment with render
-* Automatic scheduling
+* Quick queries
+* Cloud deployment
+* Cron
 
-## Documentation
-
-### Youbike API
-![query-ubike](https://user-images.githubusercontent.com/97031067/223732784-acffb1ac-9fe5-4e51-b68e-dd305360864b.jpg)
-
-### Cron
+## Cron
 ![cron](https://user-images.githubusercontent.com/97031067/223153397-a53e02d2-9527-4f6f-9635-21a90334ff9d.jpg)
 [node-cron](https://www.npmjs.com/package/node-cron)
 
